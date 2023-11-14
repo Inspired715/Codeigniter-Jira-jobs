@@ -79,6 +79,7 @@ class User_Controller extends MY_Controller {
 	}
 
 	public function save_user(){
+		
 		$data = json_decode(file_get_contents('php://input'), true);
 
 		$id = isset($data['id'])?$data['id']:'';
