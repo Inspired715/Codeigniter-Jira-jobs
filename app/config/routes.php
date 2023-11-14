@@ -56,6 +56,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'Login_Controller/index';
 $route['auth'] = 'Login_Controller/checkAuth';
 $route['users'] = 'User_Controller';
-
+$route['getUsers'] = 'User_Controller/getUsers';
+$route['avatar_upload'] = 'User_Controller/uploadAvatar';
+$route['delete_user'] = 'User_Controller/delete_user';
+$route['save_user'] = 'User_Controller/save_user';
+$route['reset_password'] = 'User_Controller/reset_password';
 $route['kanban'] = 'Kanban_Controller';
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -12,6 +12,14 @@
 
     <script> var BASE_URL = '<?php echo base_url()?>';</script>
     <link href="<?php echo base_url('assets/css/style.css')?>" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendor/toastr/toastr.css')?>">
+    
+    <script src="<?php echo base_url('assets/js/global.js')?>"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <script src="<?php echo base_url('assets/vendor/toastr/toastr.js')?>"></script>
+</script>
+
 </head>
 <body data-typography="poppins" data-theme-version="dark" data-sidebar-style="full" data-layout="vertical"
     data-nav-headerbg="color_1" data-headerbg="color_1" data-sibebarbg="color_1" data-sidebar-position="fixed"
@@ -63,7 +71,7 @@
                                                 <div class="timeline-panel">
                                                     <div class="media me-2">
                                                         <img alt="image" width="50"
-                                                            src="<?php echo base_url('assets/img/default-avatar.jpg')?>">
+                                                            src="<?php echo $_SESSION['avatar']?>">
                                                     </div>
                                                     <div class="media-body">
                                                         <h6 class="mb-1">Dr sultads Send you Photo</h6>
@@ -110,10 +118,10 @@
                             </li>
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                                    <img src="<?php echo base_url('assets/img/default-avatar.jpg')?>" width="20" alt="">
+                                    <img src="<?php echo $_SESSION['avatar']?>" width="20" alt="">
                                     <div class="header-info ms-3">
-                                        <span class="fs-18 font-w500 mb-2">Kevin Pineda</span>
-                                        <small class="fs-12 font-w400">admin@gmail.com</small>
+                                        <span class="fs-18 font-w500 mb-2"><?php echo $_SESSION['name']?></span>
+                                        <small class="fs-12 font-w400"><?php echo $_SESSION['email']?></small>
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
@@ -195,7 +203,6 @@
             </div>
         </div>
         <div class="content-body" style="min-height: 1110px;">
-            <!-- row -->
             <div class="container-fluid">
                 <div class="row">
 					<?php include ($page)?>
@@ -209,6 +216,5 @@
         </div>
     </div>
 </body>
-<script src="<?php echo base_url('assets/js/global.js')?>"></script>
 <script src="<?php echo base_url('assets/js/custom.js')?>"></script>
 </html>

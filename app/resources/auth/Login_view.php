@@ -15,7 +15,9 @@
         var BASE_URL = '<?php echo base_url()?>';
     </script>
     <link href="<?php echo base_url('assets/css/style.css')?>" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/vendor/toastr/toastr.css')?>">
 	<script src="<?php echo base_url('assets/js/global.js')?>"></script>
+    <script src="<?php echo base_url('assets/vendor/toastr/toastr.js')?>"></script>
 </head>
 
 <body class="vh-100" data-typography="poppins" data-theme-version="light" data-sidebar-style="full"
@@ -38,11 +40,11 @@
                                     <form id="login_form">
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Email</strong></label>
-                                            <input type="email" class="form-control" value="hello@example.com">
+                                            <input type="email" class="form-control" name="email" placeholder="hello@example.com" required>
                                         </div>
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" class="form-control" value="Password">
+                                            <input type="password" class="form-control" name="password" placeholder="Password" required>
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary btn-block">Sign Me In</button>

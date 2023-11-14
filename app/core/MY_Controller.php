@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function isLogined(){
-      if ($_SESSION['user_name']) {
+      if ($_SESSION['email']) {
 
       }else{
         redirect(base_url('/'));

@@ -83,7 +83,7 @@ var TransEase = function(){
            qs.isRtl = false;
        }
    }
-
+   
    var handleMenuPosition = function(){
         
         const innerWidth = $(window).innerWidth();
@@ -133,7 +133,6 @@ var TransEase = function(){
            handleAllChecked();
            handleNavigation();
            handleCurrentActive();
-           
            handleMinHeight();
            handleHeaderHight();
            handlePerfectScrollbar();
